@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Learning selectors</title>
+        <style>
+            p{
+                color: blue;
+            }
+            #error{
+                color: red;
+            }
+            .container{
+                background-color: lightblue;
+                width: 100px;
+                height: 100px;
+                border: 2px solid;
+            }
+            *{
+                margin: 5;
+                padding: 5;
+            }
+            h1,h2,h3{
+                font-weight:normal;
+            }
+            [href]
+            {
+                font-style: italic;
+            }
+            ul>li{
+                list-style-type: circle;
+            }
+            h1 article{
+                color: lightcoral;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            paragraph content
+        </p>
+        <aside id="error">Error.. Try again</aside>
+        <div class="container">container</div>
+        <h1>Heading1</h1>
+        <h2>Heading2</h2>
+        <h3>Heading3</h3>
+        <h4>Heading4</h4>
+        <a href="#">Connect to Accenture</a>
+        h1~p{
+            color:blue;
+            font-size:18px;
+        }
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+        </ul>
+        <h1>
+            <article>Article inside Heading1</article>
+        </h1>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Get element by name</h2>
+        <input type="radio" name="technology" value="Java"> Java<br>
+        <input type="radio" name="technology" value="Python"> Python<br>
+        <input type="radio" name="technology" value="SFDC"> SFDC<br>
+        <input type="radio" name="technology" value="DotNet"> DotNet<br>
+        <output>hello</output>
+        <output></output>
+        <script>
+            var tech=document.getElementsByName("technology");
+            var output=document.getElementsByTagName("output");
+            
+            output[0].value="no of tech : "+tech.length +"<br>";
+            
+            output[1].value="no of tech : "+tech.length;
+        </script>
+    </body>
+</html>

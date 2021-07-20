@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>class definition</h2>
+        <p id="demo"></p>
+        <script>
+            class Student
+            {
+                constructor(name, gyear)
+                {
+                    this.name=name;
+                    this.gyear=gyear;
+                }
+            }
+
+            mydet=new Student("Rohit", 2020);
+            document.getElementById("demo").innerHTML=mydet.name + " " + mydet.gyear+"<br>";
+
+        </script>
+    </body>
+</html>

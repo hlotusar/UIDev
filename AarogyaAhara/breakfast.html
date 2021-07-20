@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <style>
+        html {
+            background: url(tabletop.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #food {
+            position: fixed;
+            top: 5%;
+            width: 100%;
+            color: rgb(223, 223, 17);
+            font-size: 320%;
+            text-align: center;
+        }
+
+        #items {
+            position: fixed;
+            top: 30%;
+            left: 35%;
+        }
+
+        input {}
+
+        td {
+            color: rgb(223, 223, 17);
+            font-size: 200%;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 10%;
+            left: 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="food">Breakfast</h1>
+
+    <form id="items">
+        <table>
+            <tr>
+                <td><input class="check" type="checkbox" value="Idli"> Idli</td>
+                <td><input type="number" id="Idli" min="1" max="1000"></td>
+            </tr>
+            <tr>
+                <td><input class="check" type="checkbox" value="Vada"> Vada</td>
+                <td><input type="number" id="Vada" min="1" max="1000"></td>
+            </tr>
+            <tr>
+                <td><input class="check" type="checkbox" value="Mangalore Buns"> Mangalore Buns</td>
+                <td><input type="number" id="Mangalore Buns" min="1" max="1000"></td>
+            </tr>
+            <tr>
+                <td><input class="check" type="checkbox" value="Puri"> Puri</td>
+                <td><input type="number" id="Puri" min="1" max="1000"></td>
+            </tr>
+            <tr>
+                <td><input class="check" type="checkbox" value="Tea"> Tea</td>
+                <td><input type="number" id="Tea" min="1" max="1000"></td>
+            </tr>
+            <tr>
+                <td><a href="home.html"><img height="50px" width="50px" src="home.jpg" alt="home"></a></td>
+                <td><input type="button" value="Order" onclick="orderBreakfast()"> </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var foodList = {
+            "Tea": 10,
+            "Puri": 20,
+            "Mangalore Buns": 30,
+            "Vada": 40,
+            "Idli": 50
+        };
+        let orderBreakfast = () => {
+            let breakfast = document.querySelectorAll('input[class="check"]:checked');
+            let order = [];
+            breakfast.forEach((item) => {
+                let quantity = parseInt(document.getElementById(item.value).value);
+                let price = quantity * foodList[item.value];
+                order.push({
+                    foodItem: item.value,
+                    quantity: quantity,
+                    price: price
+                });
+            });
+
+            window.sessionStorage.setItem("order", JSON.stringify(order));
+            window.location.href = "bill.html";
+
+        }
+
+
+    </script>
+
+    <!-- <footer>
+        
+    </footer> -->
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <style>
+        html {
+            background: url(background.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        footer {
+            position: fixed;
+            left: 10%;
+            bottom: 10%;
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        #name{
+            position: fixed;
+            left: 10%;
+            top: 5%;
+            width: 100%;
+            color: white;
+            font-size: 320%;
+            text-align: center;
+        }
+
+        #desc{
+            position: fixed;
+            left: 10%;
+            top: 20%;
+            width: 100%;
+            color: white;
+            font-size: 120%;
+            text-align: center;
+        }
+
+        #login{
+            position: fixed;
+            left: 50%;
+            top: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function validateForm()
+        {
+            var userName=document.getElementById("uname").value;
+            var password=document.getElementById("pwd").value;
+            if(userName == undefined || userName.length == 0 || password == undefined || password.length == 0)
+            {
+                document.getElementById("msg").innerHTML="Username and password are mandatory";
+            }
+
+            if(userName=="Rohit" && password=="12345")
+            {
+                window.location.href="home.html";
+            }
+            else
+            {
+                document.getElementById("msg").innerHTML="Please check useername and password";
+            }
+        }
+    </script>
+    <h1 id="name">Aarogya Ahara</h1>
+    <h2 id="desc">Food that will keep you healthy</h2>
+    <form id="login">
+        <table>
+            <tr>
+                <td><input type="text" placeholder="UserName" id="uname"></td>
+            </tr>
+            <tr>
+                <td><input type="password" placeholder="Password" id="pwd"></td>
+
+            </tr>
+            <tr>
+                <td style="text-align: center;"><p style="color: red;" id="msg" ></p></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 30% ;"><input  type="button"value="Login" onclick="validateForm()"></td>
+            </tr>
+        </table>
+    </form>
+
+    <footer>Aarogya Ahara &copy; Registered 2021</footer>
+</body>
+
+</html>

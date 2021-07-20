@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var country="INDIA";
+            var myCompany=function(){
+                var compName="Accenture";
+                var location=function(loc){
+                    alert("compName" + " "+loc+", "+country);
+                }
+                return location;
+            }
+            var myClosure=myCompany();
+            myClosure("bangalore")
+        </script>
+    </body>
+</html>

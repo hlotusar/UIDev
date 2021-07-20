@@ -1,0 +1,15 @@
+p{
+    width: 400px;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    background: lightblue;
+    resize:both ;
+   
+}
+p.clipped{
+    text-overflow: clip;
+}
+p.ellipses{
+    text-overflow: ellipsis;
+}

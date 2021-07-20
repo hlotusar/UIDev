@@ -1,0 +1,35 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var employee1=new Object();
+            employee1.fname="Rohit";
+            employee1.lname="R";
+            employee1.age=24;
+            document.writeln("Employee1 : "+employee1.fname + " "+ employee1.lname+" "+employee1.age + "<br>");
+            
+            //object literal
+            employee2={
+                fname : "Sam",
+                lname : "d",
+                age : 26
+            }
+
+            document.writeln("Employee2 : "+employee2.fname + " "+ employee2.lname+" "+employee2.age + "<br>");
+
+            //object constructor
+            function employee(fname, lname, age)
+            {
+                this.fname=fname;
+                this.lname=lname;
+                this.age=age;
+            }
+
+            //creating instance
+            var employee3 = new employee("pinky", "R", 29);
+            document.writeln("Employee3 : "+employee3.fname + " "+ employee3.lname+" "+employee3.age + "<br>");
+        </script>
+    </body>
+</html>

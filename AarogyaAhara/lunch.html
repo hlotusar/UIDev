@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <style>
+        html {
+            background: url(tabletop.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #food {
+            position: fixed;
+            top: 5%;
+            width: 100%;
+            color: rgb(223, 223, 17);
+            font-size: 320%;
+            text-align: center;
+        }
+
+        #items {
+            position: fixed;
+            top: 30%;
+            left: 35%;
+        }
+
+        input {
+        }
+
+        td {
+            color: rgb(223, 223, 17);
+            font-size: 200%;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 10%;
+            left: 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="food">Breakfast</h1>
+
+    <form id="items">
+        <table>
+            <tr>
+                <td><input class="check" type="checkbox" value="Joolada Rooti Oota"> Joolada Rooti Oota</td>
+                <td><input type="number" id="Joolada Rooti Oota" min="1" max="1000"></td>
+            </tr>
+            <tr>
+                <td><input class="check" type="checkbox" value="Roti Oota"> Roti Oota</td>
+                <td><input type="number" id="Roti Oota" min="1" max="1000"></td>
+            </tr>
+            <tr>
+                <td><input class="check" type="checkbox" value="Chapati Thali"> Chapati Thali</td>
+                <td><input type="number" id="Chapati Thali" min="1" max="1000"></td>
+            </tr>
+            <tr>
+                <td><input class="check" type="checkbox" value="Fried Rice"> Fried Rice</td>
+                <td><input type="number" id="Fried Rice" min="1" max="1000"></td>
+            </tr>
+            <tr>
+                <td><input class="check" type="checkbox" value="Mini Thali"> Mini Thali</td>
+                <td><input type="number" id="Mini Thali" min="1" max="1000"></td>
+            </tr>
+            <tr>
+                <td><a href="home.html"><img height="50px" width="50px" src="home.jpg" alt="home"></a></td>
+                <td><input  type="button" value="Order" onclick="orderLunch()"> </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var foodList = {
+            "Joolada Rooti Oota": 10,
+            "Roti Oota": 20,
+            "Chapati Thali": 30,
+            "Fried Rice": 40,
+            "Mini Thali": 50
+        };
+        let orderLunch= () => {
+            let breakfast = document.querySelectorAll('input[class="check"]:checked');
+            let order = [];
+            breakfast.forEach((item) => {
+                let quantity = parseInt(document.getElementById(item.value).value);
+                let price = quantity * foodList[item.value];
+                order.push({
+                    foodItem: item.value,
+                    quantity: quantity,
+                    price: price
+                });
+            });
+
+            window.sessionStorage.setItem("order", JSON.stringify(order));
+            window.location.href = "bill.html";
+
+        }
+    </script>
+
+    <!-- <footer>
+        
+    </footer> -->
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "calculatorprojectdemo890",
+  "version": "1.0.1",
+  "description": "calculator projector for npm package publish",
+  "main": "calculatorBack.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

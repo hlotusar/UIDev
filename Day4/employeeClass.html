@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            class employee
+            {
+                constructor(id, name, sal, location, project)
+                {
+                    this.id=id;
+                    this.name=name;
+                    this.sal=sal;
+                    this.location=location;
+                    this.project=project;
+                }
+
+                display () {
+
+                    document.getElementById("demo").innerHTML= "Employee ID : " +this.id+"<br>" +
+                    "Employee Name : " +this.name+"<br>" +
+                    "Employee Salary : " +this.sal+"<br>" +
+                    "Employee Location : " +this.location+"<br>" +
+                    "Employee Project : " +this.project+"<br>" 
+                }
+            }
+            var emp=new employee(12,"xyz",10000,"bangalore","ban");
+            emp.display();
+        </script>
+    </body>
+</html>

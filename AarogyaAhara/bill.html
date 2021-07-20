@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <style>
+        html {
+            background: url(tabletop.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #demo{
+            position: fixed;
+            top: 10%;
+            color: rgb(223, 223, 17);
+            font-size: 200%;
+            left: 30%;
+        }
+
+        #bil{
+            position: fixed;
+            top: 55%;
+            color: rgb(223, 223, 17);
+            font-size: 200%;
+            left: 32%;
+        }
+
+        a {
+            position: fixed;
+            top: 72%;
+            left: 40%;
+        }
+
+        h1 {
+            position: fixed;
+            font-size: 320%;
+            color: rgb(223, 223, 17);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="
+    top: 1%;
+    left: 37%;">Bill</h1>
+    <p id="demo"></p>
+    <p id="bil"></p>
+    <a href="home.html"><img height="50px" width="50px" src="home.jpg" alt="home"></a>
+    <br>
+    <h1 style="
+    top: 79%;
+    left: 33%;">Thank you</h1>
+    <script>
+        window.onload = generateBill = () => {
+            let order = JSON.parse(window.sessionStorage.getItem("order"));
+            console.log(order);
+            let billArea = document.getElementById("demo");
+            let total = 0;
+            let htmlString = "<ul>";
+            order.forEach(item => {
+                htmlString += "<li>" + item.foodItem + ' x ' + item.quantity + ' = ' + item.price + "</li>";
+                total += item.price;
+            })
+            htmlString += "</ul><br>";
+            //htmlString += "Your total bill is " + total;
+            billArea.innerHTML = htmlString;
+            document.getElementById("bil").innerHTML="Your total bill is " + total;
+        }
+    </script>
+</body>
+
+</html>

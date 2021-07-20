@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <canvas id="mycanvas">your browser does not support HTML5 canvas tag</canvas>
+        <script>
+            var c=document.getElementById("mycanvas");
+            var ctx = c.getContext('2d');
+            ctx.font="25pt Calibri";
+            ctx.fillStyle = 'red';
+            ctx.fillRect(10,50,80,80);
+            ctx.fillText('canvas example!', 10,150);
+
+        </script>
+
+    </body>
+</html>

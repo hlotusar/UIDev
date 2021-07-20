@@ -1,0 +1,1 @@
+document.write("Hi js from external <br>");

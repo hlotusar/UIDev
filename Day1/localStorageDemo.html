@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            function setData()
+            {
+                var name = document.getElementById("fname");
+                localStorage.setItem("MyName", name.value)
+                
+                
+            }
+            function getData()
+            {
+                alert(localStorage.getItem("MyName"));
+            }
+        </script>
+    </head>
+    <body>
+        Enter your Name : <input id="fname" type="text" /><br>
+        <input type="button" value="Store Name" onclick="setData()">
+        <input type="button" value="Get Name" onclick="getData()">
+
+        <div id="div1"></div>
+    </body>
+</html>

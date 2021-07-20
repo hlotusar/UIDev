@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <h2>Non Primitive Datatypes</h2>
+    </head>
+    <body>
+        <script>
+            document.write("<hr>");
+            document.write("<h3>Array</h3>");
+            var strArray= ["one","two","three"];
+            var numArr=[1,2,3,4];
+            var sArray=new Array();
+            sArray[0] = "html";
+            sArray[1]="css";
+            document.write("<hr>");
+            document.write(sArray);
+            var mixArray=[1,2,"hi",12.3,true]
+            document.write("<h3>Print with Data types <br>");
+            document.write("strArray " + typeof(strArray)+" : "+ strArray + "<br>");
+            document.write("numArray " + typeof(numArr)+" : "+ numArr + "<br>");
+            document.write("mixArray" + typeof(mixArray)+" : "+ mixArray + "<br>");
+            document.write("<hr>");
+
+            document.write("<h3>Date and Time<h3>");
+            var currentDate = new Date();
+            var date1=new Date("2021 2 July");
+            var date2=new Date("2 July 2021");
+            document.write("<br>");
+            document.write("currDate : "+typeof(currentDate)+" : " +currentDate+"<br>" )
+            document.write("date2 : "+typeof(date2)+" : " +date2+"<br>" )
+            document.write("<hr>");
+
+            var product = {prodName : "Eraser", prodPrice : 12.5};
+            document.write(product.prodName + "<br>");
+
+            var product2=new Object();
+            product2.prodName1="pen";
+            document.write(product2.prodName1);
+        </script>
+    </body>
+</html>

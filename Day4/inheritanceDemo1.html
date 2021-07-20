@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            class Vehicle
+            {
+                constructor(speed, color)
+                {
+                    this.speed=speed;
+                    this.color=color;
+                }
+                drive()
+                {
+                    console.log("driving "+this.color+" color vehicle in speed "+this.speed+"<br>");
+                }
+                setSpeed(speed)
+                {
+                    this.speed=speed;
+                }
+            }
+
+            class Car extends Vehicle
+            {
+                constructor(prop, milege)
+                {
+                    super(65,"red");
+                    this.prop=prop;
+                    this.milege=milege;
+                }
+
+                setSpeed(speed)
+                {
+                    this.speed=speed;
+                }
+
+                drive()
+                {
+                    console.log("driving the car : "+this.color+" "+this.speed+" "+this.milege+"<br>");
+                }
+            }
+
+            Vehicle veh=new Vehicle(65, "red");
+            Car car=new Car(20);
+        </script>
+    </body>
+    <p id="demo"></p>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+            input a number between 5 to 10 : <input type="text" id="box1" required> <br>
+        
+        <input type="button" value="check" onclick="check()" >
+        
+        <script>
+            try{
+            function check()
+            {
+                var input = document.getElementById("box1").value;
+                if(isNaN(input)){throw;}
+                if (input < 5 ){
+                    document.write("too small");
+                }
+                else if(input >10)
+                {
+                   document.write("too big");
+                }
+                else{
+                    document.write("correct");
+                }
+               
+
+            }
+            }
+            catch(ex)
+            {
+                document.write("it is not a number");
+            }
+        </script>
+    </body>
+</html>

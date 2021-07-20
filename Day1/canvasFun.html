@@ -1,0 +1,17 @@
+<html>
+    <head>
+    </head>
+    <body onload="draw()">
+        
+    </body>
+    <script>
+        function draw(){
+            var canvas=document.getElementById("canvas1");
+            var context = canvas.getContext("2d");
+            context.beginPath();
+            context.moveTo(0,0);
+            context.lineTo(200,300);
+            context.stroke();
+        }
+    </script>
+</html>

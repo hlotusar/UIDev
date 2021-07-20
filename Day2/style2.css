@@ -1,0 +1,51 @@
+#div1{
+    border-width: thick;
+    border-style: dashed;
+    border-color: red;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#div2{
+    border-width: thick;
+    border-style: dashed;
+    border-color: red;
+    padding: 10px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+}
+
+#div3{
+    border-width: thick;
+    border-style: solid;
+    border-color: blue;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-left-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#div4{
+    border: 20px;
+   border-top-color: green ;
+  
+    border-style: solid;
+    margin-bottom: 10px;
+}
+#div5{
+    border: 10px;
+    border-style: solid;
+    box-shadow: 2px 2px 4px 3px red;
+}
+#div6{
+    border: 10px;
+    border-style: solid;
+    box-shadow:inset 2px 2px 4px 3px red;
+}
+#mydiv{
+    background-color: yellow;
+    color: blue;
+}
+.black{
+    background-color: peru;
+}

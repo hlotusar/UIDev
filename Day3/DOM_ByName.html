@@ -1,0 +1,16 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Get element by name</h2>
+        <input type="radio" name="technology" value="Java"> Java<br>
+        <input type="radio" name="technology" value="Python"> Python<br>
+        <input type="radio" name="technology" value="SFDC"> SFDC<br>
+        <input type="radio" name="technology" value="DotNet"> DotNet
+        <script>
+            var tech=document.getElementsByName("technology");
+            alert("No of technolgies : "+tech.length);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            #error{
+                color: red;
+            }
+            form{
+                border:2px solid;
+                width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>LogIn Form</h2>
+        <output id="error"></output>
+        <form>
+            <table>
+                <tr>
+                    <td>User Name : </td> 
+                    <td style="color: red">*</td>
+                    <td><input type="text" placeholder="UserName" id="txtName"></td>
+                </tr>
+                <tr>
+                    <td>Password : </td><td style="color: red;">*</td>
+                    <td><input type="password" placeholder="Password" id="pwd"></td>
+
+                </tr>
+                <tr>
+                    <td><input type="button" value="LogIn" onclick="validateForm()"></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function validateForm()
+            {
+                var uname=document.getElementById("txtName").value;
+                var passwd=document.getElementById("pwd").value;
+                if(uname.length == 0 || passwd.length == 0) 
+                {
+                    document.getElementById("error").value="username and password are mandatory fields";
+                    return false;
+                }
+                if(uname=="accent" && passwd=="1234")
+                {
+                    alert("login successful");
+                }
+                else{
+                    
+                }
+            }
+        </script>
+    </body>
+</html>

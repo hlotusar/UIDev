@@ -1,0 +1,24 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Arrow Function Demo</h2>
+        <p id="demo"></p>
+
+        <script>
+            
+            (function(){
+                console.log("iife");
+            })();
+        </script>
+
+        <script>
+            (function(num1, num2){
+                var sum=num1+num2;
+                console.log("performed calculation");
+                console.log("sum of 2 nos is : "+ sum);
+            })(10,12);
+        </script>
+    </body>
+</html>

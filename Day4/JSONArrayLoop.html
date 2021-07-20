@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="demo"></p>
+
+        <script>
+            var myObj,x="";
+            myObj={
+                "name":"Rohit",
+                "id" : 100,
+                "languages" : ["python", "JS", "Java", "C#","Cognos"]
+            };
+            delete myObj.languages[0];
+            myObj.languages[2]="Kotlin;"
+            for(i in myObj.languages)
+            {
+                x+=myObj.languages[i]+ "<br>";
+            }
+
+            x+=myObj.languages[0];
+            document.getElementById("demo").innerHTML=x;
+            //document.getElementById("demo").innerHTML=myObj.languages[0];
+        </script>
+    </body>
+</html>

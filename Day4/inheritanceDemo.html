@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function  Person() {
+                Person.prototype.walk=function(){
+                    console.log("I can walk normally");
+                }
+                Person.prototype.sayHello=function(){
+                    console.log("from func hello");
+                }
+            }
+                var p=new Person();
+                p.walk();
+                p.sayHello();
+            function Employee(){
+
+            }
+            Employee.prototype=new Person();
+            Employee.prototype.sayHello=function(){
+                console.log("say hello from employee");
+
+            }
+            var emp=new Employee();
+            emp.sayHello();
+            emp.walk();
+        </script>
+    </body>
+</html>
